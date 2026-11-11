@@ -13,6 +13,8 @@ The contact function needs Netlify's local development server: run `npx netlify 
 
 ## GitHub Pages
 
+In the repository, set **Settings → Pages → Build and deployment → Source** to **GitHub Actions**. If the source remains set to deploy from a branch, GitHub Pages serves the unbuilt Vite source and the app will appear blank.
+
 Pushes to `main` run `.github/workflows/static.yml`, which installs dependencies, builds the Vite app, and deploys `dist/` to GitHub Pages. The Vite base path is configured for this repository's project site. The contact form uses the Netlify function when deployed to Netlify; on GitHub Pages, it opens the visitor's email app with the message addressed to the portfolio owner.
 
 ## Complete your portfolio
