@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.netlify/
+src/aipy/
+.env
+.env.*
+!.env.example
+npm-debug.log*

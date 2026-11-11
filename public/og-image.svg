@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="glow" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#d2ff68" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#d2ff68" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" fill="none" stroke="#fff" stroke-opacity=".055"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#0b0e11"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="1020" cy="90" r="430" fill="url(#glow)"/>
+  <rect x="94" y="106" width="10" height="10" rx="5" fill="#d2ff68"/>
+  <text x="126" y="118" fill="#c4c9c4" font-family="Arial, sans-serif" font-size="18" letter-spacing="3">PORTFOLIO / 2026</text>
+  <text x="94" y="308" fill="#f3f4ed" font-family="Arial, sans-serif" font-size="76" font-weight="700">Prasad Tanaji Dighe</text>
+  <text x="98" y="370" fill="#d2ff68" font-family="Arial, sans-serif" font-size="25">Computer Science Student · Aspiring Software Developer</text>
+  <text x="98" y="508" fill="#a0a6a0" font-family="Arial, sans-serif" font-size="19">Solapur, Maharashtra, India</text>
+</svg>
