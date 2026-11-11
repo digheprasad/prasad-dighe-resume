@@ -1,6 +1,6 @@
 # Prasad Tanaji Dighe — Portfolio
 
-A responsive React, Vite, and Tailwind portfolio prepared for Netlify. The supplied workspace did not contain existing resume, project, education, skills, certification, or social-link details; the site leaves those data collections empty rather than inventing credentials.
+A responsive React, Vite, and Tailwind portfolio prepared for Netlify and GitHub Pages.
 
 ## Local development
 
@@ -10,6 +10,10 @@ A responsive React, Vite, and Tailwind portfolio prepared for Netlify. The suppl
 4. Run `npm run dev`.
 
 The contact function needs Netlify's local development server: run `npx netlify dev` after installing the Netlify CLI. The regular Vite server does not emulate serverless functions.
+
+## GitHub Pages
+
+Pushes to `main` run `.github/workflows/static.yml`, which installs dependencies, builds the Vite app, and deploys `dist/` to GitHub Pages. The Vite base path is configured for this repository's project site. The contact form uses the Netlify function when deployed to Netlify; on GitHub Pages, it opens the visitor's email app with the message addressed to the portfolio owner.
 
 ## Complete your portfolio
 

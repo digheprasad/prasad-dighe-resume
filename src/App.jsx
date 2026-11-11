@@ -154,17 +154,20 @@ function App() {
 
   useEffect(() => {
     const configuredSiteUrl = import.meta.env.VITE_SITE_URL;
-    const siteUrl = new URL(configuredSiteUrl || window.location.origin).origin;
+    const defaultSiteUrl = new URL(import.meta.env.BASE_URL, window.location.origin);
+    const siteUrl = new URL(configuredSiteUrl || defaultSiteUrl.href);
+    siteUrl.pathname = `${siteUrl.pathname.replace(/\/+$/, "")}/`;
+    const canonicalUrl = siteUrl.href;
     const canonical = document.querySelector('link[rel="canonical"]') || document.createElement("link");
     canonical.rel = "canonical";
-    canonical.href = `${siteUrl}/`;
+    canonical.href = canonicalUrl;
     document.head.appendChild(canonical);
 
-    const socialImage = `${siteUrl}/og-image.svg`;
+    const socialImage = new URL("og-image.svg", siteUrl).href;
     document.querySelector('meta[property="og:url"]')?.remove();
     const ogUrl = document.createElement("meta");
     ogUrl.setAttribute("property", "og:url");
-    ogUrl.content = `${siteUrl}/`;
+    ogUrl.content = canonicalUrl;
     document.head.appendChild(ogUrl);
     const ogImage = document.querySelector('meta[property="og:image"]');
     if (ogImage) ogImage.content = socialImage;
@@ -194,13 +197,13 @@ function App() {
             addressRegion: "Maharashtra",
             addressCountry: "IN",
           },
-          url: `${siteUrl}/`,
+          url: canonicalUrl,
           sameAs: [portfolio.linkedin],
         },
         {
           "@type": "WebSite",
           name: `${portfolio.name} — Portfolio`,
-          url: `${siteUrl}/`,
+          url: canonicalUrl,
           inLanguage: "en-IN",
         },
       ],
@@ -244,6 +247,19 @@ function App() {
     const formData = new FormData(form);
     const payload = Object.fromEntries(formData.entries());
     try {
+      if (window.location.hostname.endsWith(".github.io")) {
+        const subject = encodeURIComponent(payload.subject);
+        const body = encodeURIComponent(
+          `Name: ${payload.name}\nEmail: ${payload.email}\n\n${payload.message}`,
+        );
+        window.location.href = `mailto:${portfolio.email}?subject=${subject}&body=${body}`;
+        setFormStatus({
+          state: "success",
+          message: "Your email app should open with your message ready to send.",
+        });
+        return;
+      }
+
       const response = await fetch("/.netlify/functions/contact", {
         method: "POST",
         headers: { "content-type": "application/json" },
