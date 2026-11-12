@@ -93,7 +93,7 @@ export const portfolio = {
   ],
   projects: [
     {
-      name: "PyPal — Python Learning Assistant",
+      name: "Pyai — Python Learning Assistant",
       description:
         "A beginner-friendly Python learning assistant that explains core concepts with code examples and practical tips, and offers basic debugging guidance.",
       technologies: ["Python", "Flask", "HTML", "CSS", "JavaScript"],
