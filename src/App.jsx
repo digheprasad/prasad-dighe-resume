@@ -312,7 +312,7 @@ function App() {
       <header className="site-header">
         <nav className="nav-shell" aria-label="Main navigation">
           <a className="brand" href="#home" onClick={closeMenu} aria-label="Prasad Dighe, home">
-            <img className="brand-logo" src="/logo.svg" alt="" aria-hidden="true" />
+            <img className="brand-logo" src={`${import.meta.env.BASE_URL}logo.svg`} alt="" aria-hidden="true" />
             <span className="brand-name">PRASAD <span>DIGHE</span></span>
           </a>
           <div className={`nav-links${menuOpen ? " is-open" : ""}`}>
@@ -685,7 +685,7 @@ function App() {
       <footer className="site-footer">
         <div className="footer-main">
           <a className="brand" href="#home" aria-label="Prasad Dighe, back to top">
-            <img className="brand-logo" src="/logo.svg" alt="" aria-hidden="true" />
+            <img className="brand-logo" src={`${import.meta.env.BASE_URL}logo.svg`} alt="" aria-hidden="true" />
             <span className="brand-name">PRASAD <span>DIGHE</span></span>
           </a>
           <p>Made with intention, in Solapur.</p>

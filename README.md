@@ -19,7 +19,7 @@ Pushes to `main` run `.github/workflows/static.yml`, which installs dependencies
 
 ## Complete your portfolio
 
-Edit `src/data/portfolio.js` with verified education, skills, projects, certificates, achievements, and social links. Put certificate image files in `public/certificates/` and reference them from a certificate entry using a site-root path such as `/certificates/course-certificate.jpg`. Certificate entries can include `name`, `issuer`, `year`, `image`, and `credentialUrl`. Project links should be complete `https://` URLs. The resume preview and downloadable PDF use the same data. The download intentionally labels empty sections as not provided.
+Edit `src/data/portfolio.js` with verified education, skills, projects, certificates, achievements, and social links. Put certificate image files in `public/certificates/` and reference them from a certificate entry using the configured public asset base path. Certificate entries can include `name`, `issuer`, `year`, `image`, and `credentialUrl`. Project links should be complete `https://` URLs. The resume preview and downloadable PDF use the same data. The download intentionally labels empty sections as not provided.
 
 ## Netlify deployment
 

@@ -1,3 +1,5 @@
+const publicAsset = (path) => `${import.meta.env.BASE_URL}${path}`;
+
 export const portfolio = {
   name: "Prasad Tanaji Dighe",
   firstName: "Prasad",
@@ -5,7 +7,7 @@ export const portfolio = {
   location: "Solapur, Maharashtra, India",
   email: "digheprasad33@gmail.com",
   linkedin: "https://www.linkedin.com/in/prasad-dighe-387a52379/",
-  profileImage: "/profile.jpeg",
+  profileImage: publicAsset("profile.jpeg"),
   objective:
     "Computer Science student aspiring to begin a career in software development and contribute to building thoughtful, useful software.",
   about:
@@ -101,11 +103,11 @@ export const portfolio = {
   certifications: [
     {
       name: "Certificate",
-      image: "/certificates/cer.jpeg",
+      image: publicAsset("certificates/cer.jpeg"),
     },
     {
       name: "Certificate",
-      image: "/certificates/par.jpeg",
+      image: publicAsset("certificates/par.jpeg"),
     },
   ],
   achievements: [],
