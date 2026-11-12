@@ -27,7 +27,7 @@ export const portfolio = {
     {
       degree: "Secondary School Certificate (SSC)",
       institution: "Maharashtra State Board",
-      details: "10th Standard",
+      details: "10th Standard . 79.60%",
     },
   ],
   skillGroups: [
