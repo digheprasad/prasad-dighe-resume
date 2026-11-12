@@ -35,8 +35,8 @@ export const portfolio = {
       category: "Programming Languages",
       skills: [
         { name: "Python", level: "Intermediate" },
-        { name: "C", level: "Beginner" },
-        { name: "C++", level: "Beginner" },
+        { name: "C", level: "Intermediate" },
+        { name: "C++", level: "Intermediate" },
       ],
     },
     {
@@ -44,7 +44,7 @@ export const portfolio = {
       skills: [
         { name: "HTML5", level: "Intermediate" },
         { name: "CSS3", level: "Intermediate" },
-        { name: "JavaScript", level: "Beginner" },
+        { name: "JavaScript", level: "Intermediate" },
         { name: "jQuery", level: "Beginner" },
         { name: "Bootstrap", level: "Beginner" },
       ],
