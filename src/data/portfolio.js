@@ -16,7 +16,7 @@ export const portfolio = {
     {
       degree: "Bachelor of Science (B.Sc.) in Computer Science",
       institution: "Sangola Mahavidyalaya, Sangola, Maharashtra",
-      year: "2026 – 2029",
+      year: "2026– 2028",
       status: "Pursuing",
     },
     {
