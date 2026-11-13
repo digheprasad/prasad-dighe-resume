@@ -29,36 +29,17 @@ body {
   margin: 0;
   min-width: 320px;
   background:
-    radial-gradient(circle at 12% 18%, rgba(146, 122, 91, .28), transparent 18%),
-    radial-gradient(circle at 80% 14%, rgba(102, 164, 155, .18), transparent 20%),
-    radial-gradient(circle at 58% 74%, rgba(168, 134, 93, .16), transparent 26%),
-    linear-gradient(135deg, #090c0d 0%, #111815 38%, #0d1011 100%);
+    radial-gradient(ellipse at 50% -12%, rgba(221, 213, 190, .075), transparent 46%),
+    linear-gradient(180deg, #101210 0%, #0b0e0d 58%, #0c0e0d 100%);
+  background-attachment: fixed;
 }
 body::before {
   position: fixed;
   z-index: -2;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(255,255,255,.013) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.013) 1px, transparent 1px),
-    radial-gradient(circle at center, rgba(255,255,255,.025), transparent 60%);
-  background-size: 64px 64px, 64px 64px, 100% 100%;
-  content: "";
-  mask-image: linear-gradient(to bottom, black, transparent 82%);
-  pointer-events: none;
-}
-body::after {
-  position: fixed;
-  z-index: -3;
-  inset: -15% -10% auto auto;
-  width: 64vw;
-  height: 64vw;
-  border-radius: 45% 55% 60% 40% / 45% 40% 60% 55%;
-  background: rgba(162, 198, 167, .06);
-  filter: blur(56px);
+  background: linear-gradient(90deg, rgba(0,0,0,.18), transparent 24%, transparent 76%, rgba(0,0,0,.18));
   content: "";
   pointer-events: none;
-  transform: rotate(18deg);
 }
 button, input, textarea { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
@@ -74,17 +55,17 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   z-index: -1;
   width: 370px;
   height: 370px;
-  border-radius: 38% 62% 56% 44% / 42% 43% 57% 58%;
-  background: radial-gradient(circle, rgba(210, 255, 104, .12) 0%, rgba(210, 255, 104, .04) 30%, rgba(210, 255, 104, 0) 70%);
-  filter: blur(110px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(210, 255, 104, .045), transparent 68%);
+  filter: blur(90px);
   pointer-events: none;
-  opacity: .8;
+  opacity: .45;
 }
 .ambient-one { top: 5%; right: -210px; }
 .ambient-two {
   top: 58%;
   left: -290px;
-  background: radial-gradient(circle, rgba(103, 148, 131, .14) 0%, rgba(92, 130, 93, .04) 35%, rgba(92, 130, 93, 0) 72%);
+  background: radial-gradient(circle, rgba(166, 157, 134, .05), transparent 68%);
 }
 .section-wrap { width: min(var(--content-width), calc(100% - 96px)); margin-inline: auto; }
 .loading-screen {
